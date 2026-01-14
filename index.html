@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Personal - Local Storage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-address-card"></i> Data Personal</h1>
+            <p class="subtitle">Simpan dan kelola data personal Anda dengan aman menggunakan Local Storage</p>
+        </header>
+
+        <div class="app-container">
+            <!-- Form Input Section -->
+            <section class="form-section">
+                <h2 class="section-title">
+                    <i class="fas fa-user-plus"></i> Form Data Personal
+                </h2>
+                
+                <form id="personalForm">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <div class="input-icon">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="name" placeholder="Masukkan nama lengkap" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" placeholder="contoh: nama@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Nomor Telepon</label>
+                        <div class="input-icon">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" id="phone" placeholder="Masukkan nomor telepon" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Tanggal Lahir</label>
+                        <div class="input-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                            <input type="date" id="dob" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Jenis Kelamin</label>
+                        <div class="input-icon">
+                            <i class="fas fa-venus-mars"></i>
+                            <select id="gender" required>
+                                <option value="" disabled selected>Pilih jenis kelamin</option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Alamat</label>
+                        <div class="input-icon">
+                            <i class="fas fa-home"></i>
+                            <textarea id="address" placeholder="Masukkan alamat lengkap" required></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn">
+                        <i class="fas fa-save"></i> Simpan Data
+                    </button>
+                    
+                    <button type="button" id="clearBtn" class="btn btn-clear">
+                        <i class="fas fa-trash-alt"></i> Hapus Semua Data
+                    </button>
+                </form>
+            </section>
+
+            <!-- Data Display Section -->
+            <section class="data-section">
+                <div class="section-title">
+                    <i class="fas fa-database"></i>
+                    <span>Data Tersimpan</span>
+                    <span id="dataCount" class="data-count">0</span>
+                </div>
+
+                <div id="dataList" class="data-list">
+                    <!-- Data akan ditampilkan di sini -->
+                    <div class="empty-state">
+                        <i class="fas fa-database"></i>
+                        <h3>Belum ada data</h3>
+                        <p>Data personal yang Anda simpan akan muncul di sini</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>Data disimpan secara lokal di browser Anda menggunakan Local Storage</p>
+            <p>© 2023 Data Personal App | Dibuat dengan HTML, CSS, dan JavaScript</p>
+        </footer>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+        <i class="fas fa-check-circle"></i>
+        <span>Data berhasil disimpan!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
